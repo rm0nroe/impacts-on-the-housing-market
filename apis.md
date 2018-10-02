@@ -10,7 +10,7 @@
     - property ID
   - outputs:
     - property ID
-    - full-address
+    - full address
       - street address
       - city
       - state
@@ -35,7 +35,15 @@
     - last sold date & price
 
 - `GetComps`:
-  - TODO
+  - inputs:
+    - property ID
+    - count (1..25 inclusive)
+  - outputs:
+    - for each comparable sale:
+      - property ID
+      - full address
+      - zestimate
+      - comparison score (0 = most relevant, higher numbers less relevant)
 
 - `GetDeepComps`:
   - TODO
