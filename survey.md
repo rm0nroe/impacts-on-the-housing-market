@@ -23,4 +23,8 @@
 6. (Jason) Elli Pagourtzi, Vassilis Assimakopoulos, Thomas Hatzichristos, Nick French, "Real estate appraisal:a review of valuation methods, Journal of Property Investment & Finance", 2003
 7. (Ryan) Stephen Sheppard and Andrew Udell, "Do Airbnb properties affect house prices?", 2018
 8. (Xiaohan) John M. Clapp and Carmelo Giaccotto. "Evaluating House Price Forecasts", 2002
+
+   This paper emphasizes the transition of house prices over time. It builds an autoregressive forecasting model and use both parametric      and non-parametric ways to evaluate the model.
+   
 9. (Xiaohan) Case, Karl E. and Shiller, Robert J. “The Efficiency of the Market for Single-Family Homes”, 1989
+   
