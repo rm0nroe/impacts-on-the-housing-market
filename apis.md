@@ -51,6 +51,8 @@
 
 ## Google Places
 
+// Costs money now? I used to use it as recently as a few months ago and you got thousands of requests for free, not sure what the costs are now.
+
 - `place/search`:
   - inputs:
     - address/arbitrary search input
