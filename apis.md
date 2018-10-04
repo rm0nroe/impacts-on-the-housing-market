@@ -48,3 +48,19 @@
 - `GetDeepComps`:
   - inputs same as `GetComps`
   - outputs same as `GetComps` plus the extra provided in `GetDeepSearchResults`
+
+## Google Places
+
+- `place/search`:
+  - inputs:
+    - address/arbitrary search input
+  - outputs:
+    - placeID
+    - formatted address
+    - rating
+    - price level
+
+## Yelp
+
+- TODO
+
