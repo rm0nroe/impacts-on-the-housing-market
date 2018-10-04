@@ -46,4 +46,5 @@
       - comparison score (0 = most relevant, higher numbers less relevant)
 
 - `GetDeepComps`:
-  - TODO
+  - inputs same as `GetComps`
+  - outputs same as `GetComps` plus the extra provided in `GetDeepSearchResults`
