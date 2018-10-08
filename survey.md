@@ -31,4 +31,7 @@
 10. (James) Meucci, Attilio, Factors on Demand: Building a Platform for Portfolio Managers, Risk Managers and Traders, 2010
 
      This paper contains a summary of methods used for generalized asset price factor contribution estimation. These methods vary from           simple to state of the art.  The paper empshises point in time estimation,  which is critical for our cross sectional analysis           house prices.
+     
+11. https://www.zillow.com/research/zestimate-forecast-methodology/
+   We will need to reference this,  but its too short to count. 
    
