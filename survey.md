@@ -44,3 +44,10 @@
       
       This paper studies how industrial, commercial, and retail development affect housing prices within a specified radius in Atlanta. Pre-development completion, immediate completion, and post-development completion price metrics are recorded and analyzed on their appreciation/deprecation as a result of the development lifecycle. The paper outlines that retail developments being introduced to surrounding residential properties yields a positive effect on the local residential pricing, which is directly applicable to our analysis on how amenities influence house prices.
 The shortcoming of this paper is around the findings of the effect of commercial development; it was found to have an insignificant effect on surrounding residential prices which is contrary to many arguments.
+
+14. (Xiaohan) Dalia Streimikiene. "Quality of Life and Housing", 2015
+   This paper describes an approach to define the concept of assessment of the quality of life index. It also discusses the main indicators for assessment of housing impact on quality of life.
+    
+15. (Xiaohan) Bob Hargreaves. "To Rent or Buy; That is the Question", 2002
+   This paper develops a financial model comparing the economics of owning versus renting and evaluates the model by incorporating estimates of probability and risk analysis. 
+   
