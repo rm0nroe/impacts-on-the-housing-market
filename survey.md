@@ -2,7 +2,7 @@
 
 1. (Zach) Edward L. Glaeser, Hyunjin Kim, Michael Luca. "Measuring Gentrification:Using YELP Data to Quantify Neighborhood Change", 2018
 
-   By incorporating yelp data and multiple house price data sources including zillow, this paper illustrate how the local business landscape correlates with measures of neighborhood gentrification. As an important indicator of gentrification, house price is strongly correlated with the increase of multiple Yelp establishments as well. 
+   By incorporating yelp data and multiple house price data sources including zillow, this paper illustrate how the local business landscape correlates with measures of neighborhood gentrification. As an important indicator of gentrification, house price is strongly correlated with the increase of multiple Yelp establishments as well. The authors found that "the presence of a Starbucks is far less important than whether the community has people who consume Starbucks".  The number of Yelp reviews were used as a proxy for business activity in this paper, and will probably prove a good feature in our model as well.
    
 2. (Zach) Angela Buck, Takisha Harrison, Linden Johnson, Holly Sontag. "Using Real Figures to Invest in Real Estate: A Multivariate Statistical Analysis of the US Housing Market", 2008
    
@@ -14,7 +14,8 @@
    
 3. (Zach) Chad Evans and Joel R. Malin. "The Relationship Between Magnet Status and and Neighborhood Home Values in Chicago"
 
-    This paper investigates whether the magnet schools may boost the house price of neighborhood. The discussion is only limited to           Chicago though. We can conduct similar analysis to other major cities to see if 'magnet school' can be used as an indicator of house       prices. 
+    This paper investigates whether the magnet schools may boost the house price of neighborhood. The discussion is only limited to           Chicago though. We can conduct similar analysis to other major cities to see if 'magnet school' can be used as an indicator of           house prices. The authors found that neighborhoods with traditional magnet schools and magnet clusters have a higher median home          value.  One limitation with this paper is it is hard to determine if the magnet schools caused the increase in home value or if          magnet schools tend to be built in better neighborhoods.
+    
 4. (James Ong) Yangfei Xu, Qinghua Zhang, Siqi Zheng and Guozhong Zhu. "House Age, Price and Rent: Implications from Land-Structure Decomposition", 2018
 
     
