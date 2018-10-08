@@ -27,4 +27,8 @@
    This paper emphasizes the transition of house prices over time. It builds an autoregressive forecasting model and use both parametric      and non-parametric ways to evaluate the model.
    
 9. (Xiaohan) Case, Karl E. and Shiller, Robert J. “The Efficiency of the Market for Single-Family Homes”, 1989
+
+10. (James) Meucci, Attilio, Factors on Demand: Building a Platform for Portfolio Managers, Risk Managers and Traders, 2010
+
+     This paper contains a summary of methods used for generalized asset price factor contribution estimation. These methods vary from           simple to state of the art.  The paper empshises point in time estimation,  which is critical for our cross sectional analysis           house prices.
    
