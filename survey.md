@@ -12,7 +12,7 @@
     investment for those wishing to dabble in real estate."
     This paper uses thirteen variables and statistical modeling methods such as PCA and factor analysis to classify the house market of 50     states into 'Risky' or 'Stable'. However, 'risky' and 'stable' are relative in the analysis. Note that the paper was written in 2008,     it may have some limitations due to the specific economic environment. 
    
-3. (Zach) Chad Evans and Joel R. Malin. "The Relationship Between Magnet Status and and Neighborhood Home Values in Chicago"
+3. (Zach) Chad Evans and Joel R. Malin. "The Relationship Between Magnet Status and and Neighborhood Home Values in Chicago", 2017
 
     This paper investigates whether the magnet schools may boost the house price of neighborhood. The discussion is only limited to           Chicago though. We can conduct similar analysis to other major cities to see if 'magnet school' can be used as an indicator of           house prices. The authors found that neighborhoods with traditional magnet schools and magnet clusters have a higher median home          value.  One limitation with this paper is it is hard to determine if the magnet schools caused the increase in home value or if          magnet schools tend to be built in better neighborhoods.
     
