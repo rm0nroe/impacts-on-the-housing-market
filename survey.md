@@ -36,7 +36,7 @@
 11. https://www.zillow.com/research/zestimate-forecast-methodology/
    We will need to reference this,  but its too short to count. 
    
-12. Naik, Philipoom, Raskar and Hidalgo.  "Streetscore - Predicting the Perceived Safety of One Million Streetscapes" 2014
+12. (Zach) Naik, Philipoom, Raskar and Hidalgo.  "Streetscore - Predicting the Perceived Safety of One Million Streetscapes" 2014
       
       This paper describes a method for measuring the perceived safety of a street using google street view images and Support Vector           Regression.  Streetscore was used by Glaseser, et al (2018) as an outcome variable to in their attempt to measure gentrification          of a neighborhood.  We could use Streetscore as an input variable in our model as part of a safety component to home value.
    
@@ -51,3 +51,4 @@ The shortcoming of this paper is around the findings of the effect of commercial
 15. (Xiaohan) Bob Hargreaves. "To Rent or Buy; That is the Question", 2002
    This paper develops a financial model comparing the economics of owning versus renting and evaluates the model by incorporating estimates of probability and risk analysis. 
    
+16. (Zach) Cantrell and Beall. "Homebuyer Preferences in the Post-Housing Bubble Era", 2015
