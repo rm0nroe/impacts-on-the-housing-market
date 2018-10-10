@@ -54,7 +54,9 @@ The shortcoming of this paper is around the findings of the effect of commercial
 16. (Zach) Cantrell and Beall. "Homebuyer Preferences in the Post-Housing Bubble Era", 2015
 
 17. (Ryan) Ivor Samuels. “What Home Buyers Want”, 2004.
+
    This paper steps through the most important aspects of buying a home from a consumers stand point. Through a collection of surveys, this report was published to outline the desires & priority of such when a consumer is considering buying a home. This information is invaluable to our project when identifying the most important features to be included when performing a home search. The shortcoming of this paper would be the sample pool of data is for home buyers in England, as opposed to in America. This can be cross sectioned with our existing research in the States to make an accurate determinant.
    
 18. (Ryan) Jessica Lautz, Meredith Dunn, Brandi Snowden, Amanda Riggs, and Brian Horowitz. “Home Buyer and Seller Generational Trend Report”, 2017
+
    This paper outlines the characteristics of home buyers along with the characteristics of the home being purchased since 2013. The data provided can be useful for our project for identifying the most influential characteristics in buying a home - neighborhood quality, school quality/distance, shopping convienence, airport locality, etc. With this, comes visualizations as well. The shortcoming of this document is the abstraction of data — it is highly generalized(what is their definition of a ‘good’ neighborhood). For our project, we will mitigate this by the use of a focused area/region. 
