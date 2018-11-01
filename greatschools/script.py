@@ -6,7 +6,7 @@ import csv
 
 # API key : 02082e9d3e963f1a5c976e471628fe53
 
-
+school_names = []
 def retrieve_schools():
         # https://api.greatschools.org/schools/nearby?key=02082e9d3e963f1a5c976e471628fe53&city=Phoenix&state=AZ&radius=15
         url = "https://api.greatschools.org/schools/nearby?key=02082e9d3e963f1a5c976e471628fe53&city=Phoenix&state=AZ&radius=35"
@@ -43,11 +43,13 @@ def retrieve_schools():
                 schools_head.append(lat)
                 lon = member.find('lon').tag
                 schools_head.append(lon)
+                schools_head.append('parentRating')
                 csvwriter.writerow(schools_head)
                 count = count + 1
         # try:
             name = member.find('name').text
             school.append(name)
+            school_names.append(name)
             type = member.find('type').text
             school.append(type)
             grade_range = member.find('gradeRange').text
@@ -67,10 +69,27 @@ def retrieve_schools():
             school.append(lat)
             lon = member.find('lon').text
             school.append(lon)
-        # except TypeError:
-        #     pass
+
+            # Query on school name to find rating
+            filtered_name = name.replace(" ", "+");
+            # https://api.greatschools.org/search/schools?key=02082e9d3e963f1a5c976e471628fe53&state=CA&q=Alameda
+            url_rating = "https://api.greatschools.org/search/schools?key=02082e9d3e963f1a5c976e471628fe53&state=CA&q="+filtered_name + "&limit=1"
+            response = requests.get(url_rating)
+            root_rating = ElementTree.fromstring(response.content)
+            for entry in root_rating:
+                try:
+                    rating = entry.find('parentRating').text
+                    print(name + ' > ' + rating)
+                    school.append(rating)
+                except AttributeError:
+                    continue
             csvwriter.writerow(school)
         school_data.close()
+
+
+
+
+
 retrieve_schools()
 
 
