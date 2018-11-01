@@ -1,20 +1,20 @@
-name,type,gradeRange,enrollment,city,state,address,lat,lon
+name,type,gradeRange,enrollment,city,state,address,lat,lon,parentRating
 Venture Academy,charter,K-7,94,Phoenix,AZ,"1535 West Dunlap Ave, 
-Phoenix, AZ  85020",33.5672,-112.0925
+Phoenix, AZ  85020",33.5672,-112.0925,5
 Mountain View Elementary School,public,PK-8,1505,Phoenix,AZ,"801 West Peoria Ave, 
-Phoenix, AZ  85029",33.581,-112.0832
+Phoenix, AZ  85029",33.581,-112.0832,5
 Sunnyslope High School,public,9-12,2040,Phoenix,AZ,"35 West Dunlap, 
-Phoenix, AZ  85021",33.56767,-112.07574
+Phoenix, AZ  85021",33.56767,-112.07574,3
 West-Mec - Sunnyslope High School,public,9-12,1,Phoenix,AZ,"35 West Dunlap, 
 Phoenix, AZ  85021",33.5669,-112.0758
 Richard E Miller School,public,K-5,569,Phoenix,AZ,"2021 West Alice, 
 Phoenix, AZ  85021",33.563805,-112.10171
 Sunnyslope Elementary School,public,K-8,832,Phoenix,AZ,"240 East Vogel Ave, 
-Phoenix, AZ  85020",33.5744,-112.0707
+Phoenix, AZ  85020",33.5744,-112.0707,3
 Royal Palm Middle School,charter,5-8,725,Phoenix,AZ,"8520 North 19th Ave, 
 Phoenix, AZ  85021",33.5612,-112.1007
 Desert View Elementary School,public,PK-5,454,Phoenix,AZ,"8621 North 3rd St, 
-Phoenix, AZ  85020",33.5632,-112.0687
+Phoenix, AZ  85020",33.5632,-112.0687,3
 Pillar Academy Online,charter,9-12,78,Phoenix,AZ,"2400 West Dunlap Ave, 
 Phoenix, AZ  85021",33.5676,-112.1104
 Most Holy Trinity Catholic Elementary School,private,PK-8,174,Phoenix,AZ,"535 East Alice Avenue, 
@@ -28,7 +28,7 @@ Phoenix, AZ  85021",33.5552,-112.1097
 E-Institute At Metro,charter,9-12,177,Phoenix,AZ,"9201 North 29th Ave, 
 Phoenix, AZ  85051",33.5698,-112.1192
 Orangewood Elementary School,charter,K-8,1016,Phoenix,AZ,"7337 North 19th Ave, 
-Phoenix, AZ  85021",33.5449,-112.0969
+Phoenix, AZ  85021",33.5449,-112.0969,4
 Metrocenter Academy,public,10-12,175,Phoenix,AZ,"9617 Metro Parkway West, 
 Phoenix, AZ  85051",33.574,-112.1219
 IntelliSchool - Metro Center,charter,9-12,153,Phoenix,AZ,"3327 West Peoria Avenue, 
@@ -36,25 +36,25 @@ Phoenix, AZ  85029",33.582043,-112.120316
 Shaw Butte School,public,PK-6,1011,Phoenix,AZ,"12202 North 21st Ave, 
 Phoenix, AZ  85029",33.5976,-112.1045
 Washington Elementary School,public,PK-6,957,Phoenix,AZ,"8033 North 27th Ave, 
-Phoenix, AZ  85051",33.5542,-112.1161
+Phoenix, AZ  85051",33.5542,-112.1161,4
 Montessori Day Public Schools Chartered - Mountain,charter,K-8,185,Phoenix,AZ,"9215 North 14th St, 
-Phoenix, AZ  85020",33.5703,-112.0512
+Phoenix, AZ  85020",33.5703,-112.0512,5
 Edupreneurship Student Center (ESC) Phoenix,charter,K-8,74,Phoenix,AZ,"7801 North 27th Ave, 
 Phoenix, AZ  85051",33.5517,-112.1165
 Arizona Preparatory Academy Online,charter,9-12,106,Phoenix,AZ,"10443 North Cave Creek Rd, 
 Phoenix, AZ  85020",33.5819,-112.0515
 Cortez High School,public,9-12,1156,Phoenix,AZ,"8828 N. 31st Avenue, 
-Phoenix, AZ  85051",33.566826,-112.12634
+Phoenix, AZ  85051",33.566826,-112.12634,4
 The Foundation For Blind Children,private,PK-2,89,Phoenix,AZ,"1235 East Harmont Drive, 
 Phoenix, AZ  85020",33.55496,-112.055
 Alta Vista Elementary School,public,K-6,647,Phoenix,AZ,"8710 North 31st Ave, 
-Phoenix, AZ  85051",33.5644,-112.1262
+Phoenix, AZ  85051",33.5644,-112.1262,4
 Torah Day School of Phoenix,private,PK-9,277,Phoenix,AZ,"1118 W Glendale Ave, 
 Phoenix, AZ  85021",33.53925,-112.08842
 Valley Classical Christian Academy,private,K-8,41,Phoenix,AZ,"7000 North Central Avenue, 
 Phoenix, AZ  85020",33.53886,-112.07521
 Lakeview Elementary School,public,K-6,576,Phoenix,AZ,"3040 West Yucca St, 
-Phoenix, AZ  85029",33.5897,-112.1245
+Phoenix, AZ  85029",33.5897,-112.1245,5
 Holy Cross Lutheran School,private,K-8,11,Phoenix,AZ,"1420 West Thunderbird Road, 
 Phoenix, AZ  85023",33.608658,-112.08926
 Moon Mountain School,public,PK-6,779,Phoenix,AZ,"13425 North 19th Ave, 
@@ -62,15 +62,15 @@ Phoenix, AZ  85029",33.6078,-112.0976
 Madison Richard Simis School,public,PK-4,951,Phoenix,AZ,"7302 North 10th St, 
 Phoenix, AZ  85020",33.5431,-112.0615
 Cholla Middle School,public,6-8,658,Phoenix,AZ,"3120 West Cholla, 
-Phoenix, AZ  85029",33.5906,-112.1261
+Phoenix, AZ  85029",33.5906,-112.1261,4
 Cornerstone Charter School,charter,9-12,226,Phoenix,AZ,"7107 North Black Canyon Hwy, 
-Phoenix, AZ  85021",33.5411,-112.1118
+Phoenix, AZ  85021",33.5411,-112.1118,5
 Washington High School,public,9-12,1733,Phoenix,AZ,"2217 W. Glendale Ave., 
-Phoenix, AZ  85021",33.537815,-112.106026
+Phoenix, AZ  85021",33.537815,-112.106026,4
 Accel,private,K-12,193,Phoenix,AZ,"10251 North 35th Avenue, 
 Phoenix, AZ  85051",33.57988,-112.13284
 St Jerome Elementary School,private,PK-8,197,Phoenix,AZ,"10815 North 35th Avenue, 
-Phoenix, AZ  85029",33.58465,-112.13293
+Phoenix, AZ  85029",33.58465,-112.13293,4
 Imagine Cortez Park Elementary School,charter,K-5,621,Phoenix,AZ,"3535 W. Dunlap, 
 Phoenix, AZ  85051",33.56613,-112.1348
 Imagine Cortez Park Middle School,charter,6-8,240,Phoenix,AZ,"3535 West Dunlap Ave, 
@@ -88,7 +88,7 @@ Phoenix, AZ  85023",33.612934,-112.097275
 Life Skills Center of Arizona,charter,9-12,239,Phoenix,AZ,"8123 North 35th Avenue Suite# 2, 
 Phoenix, AZ  85051",33.555645,-112.13424
 Maryland Elementary School,public,PK-8,899,Phoenix,AZ,"6503 North 21st Ave, 
-Phoenix, AZ  85015",33.532,-112.1032
+Phoenix, AZ  85015",33.532,-112.1032,3
 All Saints Episcopal Day School,private,PK-8,500,Phoenix,AZ,"6300 N Central Ave, 
 Phoenix, AZ  85012",33.52972,-112.0737
 Torah High School Of Arizona,private,9-12,21,Phoenix,AZ,"6516 North 7th Street, 
@@ -104,29 +104,29 @@ Phoenix, AZ  85014",33.531,-112.0618
 Moon Valley High School,public,9-12,1521,Phoenix,AZ,"3625 W Cactus Rd, 
 Phoenix, AZ  85029",33.595802,-112.13721
 Manzanita Elementary School,public,PK-6,797,Phoenix,AZ,"8430 N 39th Ave, 
-Phoenix, AZ  85051",33.5591,-112.143
+Phoenix, AZ  85051",33.5591,-112.143,5
 Abraham Lincoln Traditional School,public,K-8,616,Phoenix,AZ,"10444 North 39th Ave, 
 Phoenix, AZ  85051",33.5813,-112.1442
 Sage Academy,charter,K-8,180,Scottsdale,AZ,"10220 N. 25th Ave, 
-Scottsdale, AZ  85022",33.6141,-112.0594
+Scottsdale, AZ  85022",33.6141,-112.0594,4
 Montessori Children's School,private,1-4,28,Phoenix,AZ,"516 West Bethany Home Road, 
-Phoenix, AZ  85013",33.524143,-112.08091
+Phoenix, AZ  85013",33.524143,-112.08091,5
 John Jacobs Elementary School,public,K-6,552,Phoenix,AZ,"14421 North 23rd Ave, 
 Phoenix, AZ  85023",33.6174,-112.1094
 Ss Simon & Jude School,private,PK-8,470,Phoenix,AZ,"6351 North 27th Avenue, 
 Phoenix, AZ  85017",33.52982,-112.11652
 Ocotillo School,public,K-6,789,Phoenix,AZ,"3225 West Ocotillo Rd, 
-Phoenix, AZ  85017",33.5342,-112.128
+Phoenix, AZ  85017",33.5342,-112.128,4
 Roadrunner Elementary School,public,K-6,797,Phoenix,AZ,"7702 North 39th Ave, 
 Phoenix, AZ  85051",33.5507,-112.1437
 Tumbleweed Elementary School,public,PK-6,474,Phoenix,AZ,"4001 West Laurel Ln, 
-Phoenix, AZ  85029",33.5937,-112.1445
+Phoenix, AZ  85029",33.5937,-112.1445,3
 Empower College Prep,charter,3-12,500,Phoenix,AZ,"5757 N Central Ave, 
 Phoenix, AZ  85012",33.521866,-112.07346
 Phoenix Hebrew Academy,private,K-8,159,Phoenix,AZ,"515 East Bethany Home Road, 
 Phoenix, AZ  85012",33.523335,-112.066986
 North Pointe Preparatory,charter,7-12,864,Phoenix,AZ,"10215 North 43rd Ave, 
-Phoenix, AZ  85051",33.5789,-112.15
+Phoenix, AZ  85051",33.5789,-112.15,5
 Painted Rock Academy - Reid Traditional Schools,charter,PK-8,560,Phoenix,AZ,"14800 N. 25th Dr, 
 Phoenix, AZ  85023",33.62018,-112.11381
 Maya High School,charter,9-12,392,Phoenix,AZ,"3660 West Glendale Ave, 
@@ -136,23 +136,23 @@ Phoenix, AZ  85014",33.5263,-112.0567
 Palo Verde Middle School,public,7-8,925,Phoenix,AZ,"7502 North 39th Ave, 
 Phoenix, AZ  85051",33.5464,-112.1435
 Acacia Elementary School,public,K-6,772,Phoenix,AZ,"3021 West Evans Dr, 
-Phoenix, AZ  85053",33.6162,-112.1238
+Phoenix, AZ  85053",33.6162,-112.1238,4
 New World Educational Center,charter,K-12,172,Phoenix,AZ,"5818 N. 7th Street, 
 Phoenix, AZ  85014",33.522537,-112.064995
 Madison Heights Elementary School,public,PK-5,538,Phoenix,AZ,"7150 North 22nd St, 
-Phoenix, AZ  85020",33.5414,-112.0353
+Phoenix, AZ  85020",33.5414,-112.0353,4
 Lookout Mountain School,public,PK-6,1022,Phoenix,AZ,"15 West Coral Gables Dr, 
 Phoenix, AZ  85023",33.625,-112.0757
 Paradise Valley Christian Prep,private,PK-12,365,Phoenix,AZ,"11875 N 24th St, 
 Phoenix, AZ  85028",33.595383,-112.02937
 Hidden Hills Elementary School,public,PK-6,501,Phoenix,AZ,"1919 East Sharon Dr, 
-Phoenix, AZ  85022",33.6109,-112.0423
+Phoenix, AZ  85022",33.6109,-112.0423,4
 Ombudsman - Charter Metro,charter,9-12,66,Phoenix,AZ,"4220 West Northern Ave, 
 Phoenix, AZ  85051",33.5533,-112.1491
 Emmaus Lutheran School,private,PK-8,80,Phoenix,AZ,"3841 W Sweetwater Ave, 
-Phoenix, AZ  85029",33.603046,-112.14187
+Phoenix, AZ  85029",33.603046,-112.14187,4
 Solano School,public,PK-8,613,Phoenix,AZ,"1526 West Missouri Ave, 
-Phoenix, AZ  85015",33.5178,-112.0921
+Phoenix, AZ  85015",33.5178,-112.0921,3
 Shea Middle School,public,7-8,641,Phoenix,AZ,"2728 E. Shea Blvd., 
 Phoenix, AZ  85028",33.5823,-112.0237
 Cheder Lubavitch Arizona,private,"1, 3",20,Phoenix,AZ,"2110 E Lincoln Dr., 
@@ -162,13 +162,13 @@ Glendale, AZ  85302",33.565395,-112.15316
 Mercury Mine Elementary School,public,PK-6,540,Phoenix,AZ,"9640 North 28th St, 
 Phoenix, AZ  85028",33.573868,-112.022095
 Montebello School,public,K-8,1387,Phoenix,AZ,"5725 North 27th Ave, 
-Phoenix, AZ  85017",33.5224,-112.1162
+Phoenix, AZ  85017",33.5224,-112.1162,3
 Bennett Academy,charter,K-8,228,Phoenix,AZ,"2930 West Bethany Home Rd, 
 Phoenix, AZ  85017",33.5248,-112.1229
 Great Hearts Academies - Veritas Prep,charter,6-12,688,Phoenix,AZ,"3102 N. 56th St., 
 Phoenix, AZ  85016",33.53768,-112.035645
 Chaparral Elementary School,public,PK-6,500,Phoenix,AZ,"3808 West Joan D`Arc, 
-Phoenix, AZ  85029",33.6081,-112.1401
+Phoenix, AZ  85029",33.6081,-112.1401,4
 Desert Cove Elementary School,charter,K-6,523,Phoenix,AZ,"11020 North 28th St, 
 Phoenix, AZ  85028",33.5866,-112.0226
 Larkspur Elementary School,charter,K-6,517,Phoenix,AZ,"2430 East Larkspur, 
@@ -182,35 +182,35 @@ Phoenix, AZ  85016",33.5309,-112.0388
 West-Mec - Shadow Mountain High School,public,9-12,1,Phoenix,AZ,"2902 East Shea Blvd, 
 Phoenix, AZ  85028",33.5837,-112.0195
 Shadow Mountain High School,public,9-12,1390,Phoenix,AZ,"2902 East Shea Blvd, 
-Phoenix, AZ  85028",33.5842,-112.0191
+Phoenix, AZ  85028",33.5842,-112.0191,4
 Desert Foothills Middle School,public,7-8,660,Phoenix,AZ,"3333 West Banff, 
 Phoenix, AZ  85053",33.6192,-112.1302
 Sunset School,public,PK-6,560,Glendale,AZ,"4626 West Mountain View Rd, 
-Glendale, AZ  85302",33.5756,-112.1588
+Glendale, AZ  85302",33.5756,-112.1588,4
 Cordova Primary School,public,K-2,377,Phoenix,AZ,"6615 North 39th Ave, 
-Phoenix, AZ  85019",33.5324,-112.1406
+Phoenix, AZ  85019",33.5324,-112.1406,4
 Arroyo School,charter,K-8,599,Glendale,AZ,"4535 West Cholla, 
-Glendale, AZ  85304",33.5887,-112.1567
+Glendale, AZ  85304",33.5887,-112.1567,4
 Christ the King Academy,private,PK-3,26,Phoenix,AZ,"2929 West Greenway Road, 
-Phoenix, AZ  85053",33.625248,-112.12059
+Phoenix, AZ  85053",33.625248,-112.12059,5
 Valley Lutheran High School,private,9-12,188,Phoenix,AZ,"5199 North 7th Avenue, 
-Phoenix, AZ  85013",33.51277,-112.082146
+Phoenix, AZ  85013",33.51277,-112.082146,5
 Glenview College Preparatory High School,charter,9-12,300,Phoenix,AZ,"3802 West Maryland Avenue, 
 Phoenix, AZ  85019",33.53133,-112.14094
 Mountain Sky Middle School,public,7-8,755,Phoenix,AZ,"16225 N 7th Ave, 
-Phoenix, AZ  85023",33.63226,-112.0815
+Phoenix, AZ  85023",33.63226,-112.0815,4
 R E Simpson School,public,4-8,831,Phoenix,AZ,"5330 North 23rd Ave, 
-Phoenix, AZ  85015",33.5141,-112.1089
+Phoenix, AZ  85015",33.5141,-112.1089,4
 Horizon School,public,K-8,863,Glendale,AZ,"8520 North 47th Ave, 
-Glendale, AZ  85302",33.5612,-112.1608
+Glendale, AZ  85302",33.5612,-112.1608,5
 Catalina Ventura School,public,K-8,1078,Phoenix,AZ,"6331 West 39th Ave, 
 Phoenix, AZ  85019",33.53,-112.1421
 All Aboard Charter School,charter,K-5,110,Phoenix,AZ,"5827 North 35th Ave, 
 Phoenix, AZ  85017",33.5234,-112.1336
 Apollo High School,public,9-12,1886,Glendale,AZ,"8045 N. 47th Avenue, 
-Glendale, AZ  85302",33.554085,-112.15898
+Glendale, AZ  85302",33.554085,-112.15898,5
 Humanities And Sciences High School - Phoenix,charter,9-12,6,Phoenix,AZ,"5201 North 7th St, 
-Phoenix, AZ  85014",33.5132,-112.0644
+Phoenix, AZ  85014",33.5132,-112.0644,4
 Imagine Camelback Middle School,charter,6-8,168,Phoenix,AZ,"5050 North 19th Ave, 
 Phoenix, AZ  85015",33.5108,-112.1002
 International Commerce High School - Phoenix,charter,9-12,430,Phoenix,AZ,"5201 North 7th St, 
@@ -222,13 +222,13 @@ Phoenix, AZ  85019",33.53679,-112.15051
 Amerischools Academy - Camelback,charter,K-8,225,Phoenix,AZ,"1333 West Camelback Road, 
 Phoenix, AZ  85013",33.508953,-112.090256
 The Learning Institute,charter,7-12,130,Phoenix,AZ,"5310 North 12th St, 
-Phoenix, AZ  85014",33.5137,-112.0562
+Phoenix, AZ  85014",33.5137,-112.0562,2
 Madison #1 Elementary School,public,5-8,923,Phoenix,AZ,"5525 North 16th St, 
-Phoenix, AZ  85016",33.5183,-112.0458
+Phoenix, AZ  85016",33.5183,-112.0458,3,4,4,3,4,4,5,4,4,3,4,5,3,4,3,4,3,5,4,3,4,4
 Girls Leadership Academy of Arizona,charter,9-12,141,Phoenix,AZ,"715 W. Mariposa St., 
 Phoenix, AZ  85013",33.50787,-112.083664
 Osborn Middle School,public,7-8,565,Phoenix,AZ,"1102 West Highland Avenue, 
-Phoenix, AZ  85013",33.507153,-112.0872
+Phoenix, AZ  85013",33.507153,-112.0872,5
 BASIS Phoenix,charter,5-12,750,Phoenix,AZ,"11850 N. 32nd St., 
 Phoenix, AZ  85028",33.59382,-112.014175
 Cordova Middle School,public,3-8,848,Phoenix,AZ,"5631 North 35th Ave, 
@@ -238,13 +238,13 @@ Phoenix, AZ  85015",33.507,-112.0998
 Ironwood Elementary School,public,PK-6,529,Phoenix,AZ,"14850 North 39th Ave, 
 Phoenix, AZ  85053",33.6193,-112.1434
 Sweetwater School,charter,K-8,515,Glendale,AZ,"4602 West Sweetwater, 
-Glendale, AZ  85304",33.6043,-112.1572
+Glendale, AZ  85304",33.6043,-112.1572,4
 St. Louis the King School,private,PK-8,270,Glendale,AZ,"4331 West Maryland Avenue, 
 Glendale, AZ  85301",33.53117,-112.15225
 St Francis Xavier School,private,PK-8,643,Phoenix,AZ,"4715 North Central Avenue, 
-Phoenix, AZ  85012",33.50598,-112.07144
+Phoenix, AZ  85012",33.50598,-112.07144,4
 Westwood Primary School,public,K-3,933,Phoenix,AZ,"4711 North 23rd Ave, 
-Phoenix, AZ  85015",33.5065,-112.1075
+Phoenix, AZ  85015",33.5065,-112.1075,4
 Brophy College Preparatory,private,6-12,1322,Phoenix,AZ,"4701 North Central Avenue, 
 Phoenix, AZ  85012",33.504974,-112.07241
 Barcelona Middle School,public,4-8,700,Glendale,AZ,"6130 North 44th Ave, 
@@ -254,7 +254,7 @@ Phoenix, AZ  85028",33.582596,-112.00596
 Arizona Conservatory for Arts and Academics,charter,K-12,215,Phoenix,AZ,"2820 W. Kelton Lane, 
 Phoenix, AZ  85053",33.6364,-112.119
 Xavier College Preparatory High School,private,9-12,1165,Phoenix,AZ,"4710 North 5th Street, 
-Phoenix, AZ  85012",33.505173,-112.06726
+Phoenix, AZ  85012",33.505173,-112.06726,5
 Arizona Conservatory For Arts And Academics Middle School,charter,6-8,229,Phoenix,AZ,"2820 West Kelton Ln, 
 Phoenix, AZ  85053",33.6372,-112.1195
 Rcb Medical Arts Academy,charter,7-12,393,Phoenix,AZ,"6049 North 43rd Ave, 
@@ -262,13 +262,13 @@ Phoenix, AZ  85019",33.5253,-112.151
 Melvin E Sine School,public,PK-8,718,Glendale,AZ,"4932 West Myrtle Ave, 
 Glendale, AZ  85301",33.5429,-112.165
 Central High School,public,9-12,2251,Phoenix,AZ,"4525 North Central Ave, 
-Phoenix, AZ  85012",33.5024,-112.0726
+Phoenix, AZ  85012",33.5024,-112.0726,4
 Greenway High School,public,9-12,1510,Phoenix,AZ,"3930 W. Greenway Road, 
 Phoenix, AZ  85053",33.62637,-112.14356
 Roadrunner School,public,PK-12,199,Phoenix,AZ,"3540 East Cholla, 
 Phoenix, AZ  85028",33.5905,-112.0053
 Heritage School,public,K-8,673,Glendale,AZ,"5312 West Mountain View, 
-Glendale, AZ  85302",33.5757,-112.1739
+Glendale, AZ  85302",33.5757,-112.1739,5
 Sevilla Primary School,public,K-3,880,Phoenix,AZ,"3801 West Missouri, 
 Phoenix, AZ  85019",33.5157,-112.1415
 Sevilla West School,public,4-8,1205,Phoenix,AZ,"3851 W. Missouri Ave., 
@@ -292,7 +292,7 @@ Phoenix, AZ  85017",33.504738,-112.12777
 Cactus View Elementary School,public,PK-6,712,Phoenix,AZ,"17602 North Central, 
 Phoenix, AZ  85022",33.6466,-112.0749
 Granada East School,public,4-8,1142,Phoenix,AZ,"3022 West Campbell, 
-Phoenix, AZ  85017",33.5029,-112.1239
+Phoenix, AZ  85017",33.5029,-112.1239,4
 Aire Libre Elementary School,public,K-6,444,Phoenix,AZ,"16428 North 21st Street, 
 Phoenix, AZ  85022",33.63566,-112.038414
 Desert Palms Elementary School,public,PK-8,596,Glendale,AZ,"11441 North 55th Ave, 
@@ -300,15 +300,15 @@ Glendale, AZ  85304",33.5903,-112.1764
 Glendale American School,public,PK-8,791,Glendale,AZ,"8530 North 55th Ave, 
 Glendale, AZ  85302",33.5612,-112.1781
 Granada Primary School,public,K-3,934,Phoenix,AZ,"3232 West Campbell, 
-Phoenix, AZ  85017",33.503,-112.1279
+Phoenix, AZ  85017",33.503,-112.1279,4
 Tumbleweed Transitional Learning Center,public,9-12,49,Phoenix,AZ,"950 West Indian School Rd, 
 Phoenix, AZ  85013",33.4952,-112.0867
 Intelli-School Glendale,charter,9-12,94,Glendale,AZ,"13806 North 51st Ave, 
 Glendale, AZ  85306",33.611,-112.1685
 Alhambra High School,public,9-12,2770,Phoenix,AZ,"3839 West Camelback Rd, 
-Phoenix, AZ  85019",33.5084,-112.1413
+Phoenix, AZ  85019",33.5084,-112.1413,4
 Madison Park School,public,1-8,423,Phoenix,AZ,"1431 East Campbell, 
-Phoenix, AZ  85014",33.5011,-112.0502
+Phoenix, AZ  85014",33.5011,-112.0502,4
 Phoenix Christian Unified School,private,6-12,315,Phoenix,AZ,"1751 West Indian School Road, 
 Phoenix, AZ  85015",33.494545,-112.09509
 Madison Highland Prep,charter,9-12,470,Phoenix,AZ,"1431 East Campbell Avenue, 
@@ -328,13 +328,13 @@ Phoenix, AZ  85016",33.50335,-112.03795
 Marshall Ranch Elementary School,public,PK-8,793,Glendale,AZ,"12995 North Marshall Ranch Dr, 
 Glendale, AZ  85304",33.6,-112.179
 Sunrise Elementary School,public,PK-6,506,Phoenix,AZ,"17624 North 31st Av, 
-Phoenix, AZ  85053",33.6463,-112.1266
+Phoenix, AZ  85053",33.6463,-112.1266,4
 Our Lady Of Perpetual Help,private,PK-8,300,Glendale,AZ,"7521 North 57th Avenue, 
-Glendale, AZ  85301",33.546173,-112.17984
+Glendale, AZ  85301",33.546173,-112.17984,4
 Northwest Christian School,private,PK-12,1455,Phoenix,AZ,"16401 N 43rd Ave, 
-Phoenix, AZ  85053",33.635204,-112.14936
+Phoenix, AZ  85053",33.635204,-112.14936,5
 Indian Bend Elementary School,public,PK-6,571,Phoenix,AZ,"3633 E Thunderbird Road, 
-Phoenix, AZ  85032",33.6133,-112.0039
+Phoenix, AZ  85032",33.6133,-112.0039,5
 Carol G. Peck Elementary School,public,K-3,671,Glendale,AZ,"5810 North 49th Ave, 
 Glendale, AZ  85301",33.5229,-112.1655
 Career Success Jr/Sr High School - North Phoenix,charter,7-12,113,Phoenix,AZ,"2321 East Bell Rd, 
@@ -342,7 +342,7 @@ Phoenix, AZ  85022",33.6395,-112.0329
 Constitution Elementary School,public,PK-6,680,Phoenix,AZ,"18440 North 15th Ave, 
 Phoenix, AZ  85023",33.6536,-112.0924
 Clarendon School,public,PK-8,440,Phoenix,AZ,"1225 West Clarendon, 
-Phoenix, AZ  85013",33.4907,-112.0887
+Phoenix, AZ  85013",33.4907,-112.0887,5
 BASIS Phoenix Central,charter,K-8,864,Phoenix,AZ,"201 E. Indianola Ave., 
 Phoenix, AZ  85012",33.491695,-112.07101
 Palomino Intermediate School,public,4-6,499,Phoenix,AZ,"15815 North 29th St, 
@@ -350,7 +350,7 @@ Phoenix, AZ  85032",33.6307,-112.0186
 Imagine Bell Canyon,charter,PK-8,405,Phoenix,AZ,"18052 N Black Canyon Hwy., 
 Phoenix, AZ  85053",33.6514,-112.11611
 Grace Lutheran School,private,PK-8,155,Glendale,AZ,"5600 West Palmaire Avenue, 
-Glendale, AZ  85301",33.541035,-112.179955
+Glendale, AZ  85301",33.541035,-112.179955,4
 Palomino Primary School,public,PK-3,802,Phoenix,AZ,"15833 North 29th St, 
 Phoenix, AZ  85032",33.6321,-112.0189
 Career Success High School - Main Campus,charter,9-12,225,Phoenix,AZ,"3816 North 27th Ave, 
