@@ -53,6 +53,23 @@ body {
     stroke: black;
     stroke-width: 2px;
 }
+.homes circle:hover {
+        fill: rgba(193, 46, 42, 0.92);
+}
+
+.tooltip {
+position: absolute;
+line-height: .7;
+font-weight: bold;
+padding: 8px;
+background: rgb(255, 255, 255);
+border-color: rgba(193, 46, 42, 0.92);
+color: rgb(193,46,42,0.92);
+font-weight: bold;
+font: 11.5px sans-serif;
+border-width: thick;
+pointer-events: none;    
+}
     
 </style>
 <head>
@@ -176,12 +193,18 @@ body {
         var overlay = new google.maps.OverlayView();
 
         overlay.onAdd = function() {
-            var layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "homes");
+            var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "homes");
 
         //Create a scale to size the markers
         rScale = d3.scale.linear()
                     .domain([0, 10200901])
                     .range([4, 15]);
+
+        //Define the tooltip
+        var tooltip = d3.select("body")
+                .append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
 
         //Draw each marker
         overlay.draw = function() {
@@ -200,7 +223,22 @@ body {
                             return rScale(d.value['Zestimate']);
                         })
                     .attr("cx", padding)
-                    .attr("cy", padding);
+                    .attr("cy", padding)
+                    .on("mouseover", function(d){
+                    d3.select(this).attr("r", (rScale(d.value['Zestimate']+rScale(d.value['Zestimate'])))*2)
+                    tooltip.transition()
+                        .duration(200)
+                        .style("opacity", 1);
+                    tooltip.html("<h3>"+d.value['Address']+"</h3><br>Beds: "+d.value['Bedrooms']+"<br>Baths: "+d.value['Bathrooms']+"<br>Year Built: "+d.value['Year Built']+"<br>Square Feet: "+d.value['Home Size']+"<br>Restaurant Rating: "+d.value['avg_stars']+"<br>Schools: "+d.value['total_school'])
+                        .style("left", (d3.event.pageX - 50) + "px")
+                        .style("top", (d3.event.pageY - 185) + "px");
+                })
+                .on("mouseout", function(d) {
+                    d3.select(this).attr("r", rScale(d.value['Zestimate']))
+                    tooltip.transition()
+                        .duration(200)
+                        .style("opacity", 0);
+                });
 
             function transform(d) {
                 d = new google.maps.LatLng(d.value['Lat'], d.value['Lon']);
