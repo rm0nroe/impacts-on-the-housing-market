@@ -1,7 +1,7 @@
 
 ===Local Setup===
 1. Recommended to deploy via python SimpleHTTPServer so API calls go through without CORS error
-	a) Open terminal and navigate to directory location of project(home-buying-helper)
+	a) Open terminal and navigate to directory location of project
 	b) If you have Python installed you can run the following command: 
 		python -m SimpleHTTPServer
 	c) The web app is deployed to http://localhost:8000/
