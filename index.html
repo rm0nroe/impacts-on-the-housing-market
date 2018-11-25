@@ -178,6 +178,11 @@ body {
         overlay.onAdd = function() {
             var layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "homes");
 
+        //Create a scale to size the markers
+        rScale = d3.scale.linear()
+                    .domain([0, 10200901])
+                    .range([4, 15]);
+
         //Draw each marker
         overlay.draw = function() {
             var projection = this.getProjection(),
@@ -191,7 +196,9 @@ body {
                 .attr("class", "marker");
 
             marker.append("circle")
-                    .attr("r", 6)
+                    .attr("r", function(d) {
+                            return rScale(d.value['Zestimate']);
+                        })
                     .attr("cx", padding)
                     .attr("cy", padding);
 
