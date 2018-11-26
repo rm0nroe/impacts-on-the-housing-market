@@ -18,6 +18,7 @@ Signing up for and placing your key in the Index.html file will allow you to rem
 If you'd like to deploy your changes, you can go to https://blog.teamtreehouse.com/deploy-static-site-heroku and they will step you through a very simple process to get your changes deployed
 
 - Essentially, create a heroku account.
+- Install heroku cli
 - Go to project location on local, create new heroku app in terminal (heroku apps:create home-buying-helper)
 - Git Init(if not done already), add all, and prepare a commit on your project(git init >>> git add . >>> git commit -m "my commit message")
 - Finally, enter >>> git push heroku master
