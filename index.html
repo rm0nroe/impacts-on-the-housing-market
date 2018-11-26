@@ -176,9 +176,11 @@ pointer-events: none;
 
     // Create the Google Map
     var map = new google.maps.Map(d3.select("#map").node(), {
-      zoom: 18,
+      zoom: 10,
+      draggableCursor: 'crosshair',
       center: new google.maps.LatLng(33.4484, -112.0740),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapMaker: 'True'
         });
 
     // Load data
@@ -201,7 +203,7 @@ pointer-events: none;
                     .range([4, 15]);
 
         //Define the tooltip
-        var tooltip = d3.select("body")
+        var tooltip = d3.select("#map-container")
                 .append("div")
                 .attr("class", "tooltip")
                 .style("opacity", 0);
