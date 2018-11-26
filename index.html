@@ -161,11 +161,11 @@ pointer-events: none;
     
     
 <!--  Where visualization is built -->
-    <div class="map-container">
+    <div class="map-container" id="map-body">
     <div id="map"></div>
     </div>
     
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeYyIcgPGPfIB_QzstmWG3w787BVvpFx8"></script>
     <script src="./lib/d3.v3.min.js"></script>
     <script type="text/javascript">
 
@@ -175,84 +175,104 @@ pointer-events: none;
 
 
     // Create the Google Map
-    var map = new google.maps.Map(d3.select("#map").node(), {
-      zoom: 10,
-      draggableCursor: 'crosshair',
-      center: new google.maps.LatLng(33.4484, -112.0740),
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapMaker: 'True'
-        });
+var map = new google.maps.Map(d3.select("#map").node(), {
+  zoom: 12,
+  draggableCursor: 'crosshair',
+  center: new google.maps.LatLng(33.4484, -112.0740),
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  mapMaker: 'True'
+    });
 
-    // Load data
+// Load data
 
-    d3.csv("data_fullset.csv", function(data) {
-        data.forEach(function(d) {
-            d.Lat = +d.Lat;
-            d.Lon = +d.Lon;
-            d.Zestimate = +d.Zestimate;
-        });
+d3.csv("data_fullset.csv", function(data) {
+    //console.log(data);
+    data.forEach(function(d) {
+        d.Lat = +d.Lat;
+        d.Lon = +d.Lon;
+        d.Zestimate = +d.Zestimate;
+    });
+    //Create nested data set to account for houses with exact same Lat, Lon coordinates
+    var nested_data = d3.nest()
+                        .key(function(d) { return d.Location;})
+                        .rollup(function(v) {
+                            return {
+                                Lat: d3.max(v, function(d) { return d.Lat }),
+                                Lon: d3.max(v, function(d) { return d.Lon }),
+                                homes: Math.round(v.length),
+                                avg_zestimate: Math.round(d3.mean(v, function(d) { return d.Zestimate;})),
+                                max_zestimate: Math.round(d3.max(v, function(d) { return d.Zestimate;})),
+                                min_zestimate: Math.round(d3.min(v, function(d) { return d.Zestimate;})),
+                                avg_beds: Math.round(d3.mean(v, function(d) { return d.Bedrooms;})),
+                                max_beds: Math.round(d3.max(v, function(d) { return d.Bedrooms;})),
+                                min_beds: Math.round(d3.min(v, function(d) { return d.Bedrooms;})),
+                                avg_baths: Math.round(d3.mean(v, function(d) { return d.Bathrooms;})),
+                                max_baths: Math.round(d3.max(v, function(d) { return d.Bathrooms;})),
+                                min_baths: Math.round(d3.min(v, function(d) { return d.Bathrooms;}))
+                            };
+                        })
+                        .entries(data);
 
-        var overlay = new google.maps.OverlayView();
+    var overlay = new google.maps.OverlayView();
 
-        overlay.onAdd = function() {
-            var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "homes");
+    overlay.onAdd = function() {
+        var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "homes");
 
-        //Create a scale to size the markers
-        rScale = d3.scale.linear()
+    //Create a scale to size the markers
+    rScale = d3.scale.linear()
                     .domain([0, 10200901])
                     .range([4, 15]);
-
-        //Define the tooltip
-        var tooltip = d3.select("body")
+    
+    //Define the tooltip
+    var tooltip = d3.select("#map-body")
                 .append("div")
                 .attr("class", "tooltip")
                 .style("opacity", 0);
 
-        //Draw each marker
-        overlay.draw = function() {
-            var projection = this.getProjection(),
-            padding = 10;
+    //Draw each marker
+    overlay.draw = function() {
+        var projection = this.getProjection(),
+        padding = 10;
 
-            var marker = layer.selectAll("svg")
-                .data(d3.entries(data))
-                .each(transform)
-                .enter().append("svg")
-                .each(transform)
-                .attr("class", "marker");
+        var marker = layer.selectAll("svg")
+            .data(d3.entries(nested_data))
+            .each(transform)
+            .enter().append("svg")
+            .each(transform)
+            .attr("class", "marker");
 
-            marker.append("circle")
-                    .attr("r", function(d) {
-                            return rScale(d.value['Zestimate']);
-                        })
-                    .attr("cx", padding)
-                    .attr("cy", padding)
-                    .on("mouseover", function(d){
-                    d3.select(this).attr("r", (rScale(d.value['Zestimate']+rScale(d.value['Zestimate'])))*2)
+        marker.append("circle")
+                .attr("r", function(d) {
+                    return rScale(d.value.values['avg_zestimate'])})
+                .attr("cx", padding)
+                .attr("cy", padding)
+                .on("mouseover", function(d){
+                    d3.select(this).attr("r", (rScale(d.value.values['avg_zestimate']+rScale(d.value.values['avg_zestimate'])))*2)
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", 1);
-                    tooltip.html("<br>Beds: "+d.value['Bedrooms']+"<br>Baths: "+d.value['Bathrooms']+"<br>Year Built: "+d.value['Year Built']+"<br>Square Feet: "+d.value['Home Size']+"<br>Restaurant Rating: "+d.value['avg_stars']+"<br>Schools: "+d.value['total_school'])
+                    tooltip.html("<h3># of Homes: " + d.value.values['homes'] + "</h3>" + "<br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
                         .style("left", (d3.event.pageX - 50) + "px")
                         .style("top", (d3.event.pageY - 185) + "px");
                 })
                 .on("mouseout", function(d) {
-                    d3.select(this).attr("r", rScale(d.value['Zestimate']))
+                    d3.select(this).attr("r", rScale(d.value.values['avg_zestimate']))
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", 0);
                 });
 
-            function transform(d) {
-                d = new google.maps.LatLng(d.value['Lat'], d.value['Lon']);
-                d = projection.fromLatLngToDivPixel(d);
-                return d3.select(this)
-                    .style("left", (d.x - padding) + "px")
-                    .style("top", (d.y - padding) + "px");
-            }
-        };
-        };
-        overlay.setMap(map);
-    });
+        function transform(d) {
+            d = new google.maps.LatLng(d.value.values['Lat'], d.value.values['Lon']);
+            d = projection.fromLatLngToDivPixel(d);
+            return d3.select(this)
+                .style("left", (d.x - padding) + "px")
+                .style("top", (d.y - padding) + "px");
+        }
+    };
+    };
+    overlay.setMap(map);
+});
 
     // KEY: [#schools, #yelp venues, year built, size, #bedrooms, #bathrooms]
     lookupTable =
