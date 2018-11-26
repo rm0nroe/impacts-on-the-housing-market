@@ -203,7 +203,7 @@ pointer-events: none;
                     .range([4, 15]);
 
         //Define the tooltip
-        var tooltip = d3.select("#map-container")
+        var tooltip = d3.select("body")
                 .append("div")
                 .attr("class", "tooltip")
                 .style("opacity", 0);
@@ -231,7 +231,7 @@ pointer-events: none;
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", 1);
-                    tooltip.html("<h3>"+d.value['Address']+"</h3><br>Beds: "+d.value['Bedrooms']+"<br>Baths: "+d.value['Bathrooms']+"<br>Year Built: "+d.value['Year Built']+"<br>Square Feet: "+d.value['Home Size']+"<br>Restaurant Rating: "+d.value['avg_stars']+"<br>Schools: "+d.value['total_school'])
+                    tooltip.html("<br>Beds: "+d.value['Bedrooms']+"<br>Baths: "+d.value['Bathrooms']+"<br>Year Built: "+d.value['Year Built']+"<br>Square Feet: "+d.value['Home Size']+"<br>Restaurant Rating: "+d.value['avg_stars']+"<br>Schools: "+d.value['total_school'])
                         .style("left", (d3.event.pageX - 50) + "px")
                         .style("top", (d3.event.pageY - 185) + "px");
                 })
