@@ -286,7 +286,7 @@ d3.csv("data_fullset.csv", function(data) {
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", 1);
-                    tooltip.html("<h5>Price Estimate: $" + d.value.values['avg_score'] + "</h5>" +"<br># of Homes: " + d.value.values['homes'] + "<br>Avg. Yelp Stars: " + d.value.values['avg_yelp'] + "<br># Private Schools: " + d.value.values['private_schools'] + "<br># Public Schools: " + d.value.values['public_schools'] + "<br><br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
+                    tooltip.html("<h5>Budget: $" + d.value.values['avg_score'] + "</h5>" +"<br># of Homes: " + d.value.values['homes'] + "<br>Avg. Yelp Stars: " + d.value.values['avg_yelp'] + "<br># Private Schools: " + d.value.values['private_schools'] + "<br># Public Schools: " + d.value.values['public_schools'] + "<br><br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
                         .style("left", (d3.event.pageX - 325) + "px")
                         .style("top", (d3.event.pageY - 490) + "px");
                 })
