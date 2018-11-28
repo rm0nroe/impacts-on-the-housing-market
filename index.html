@@ -22,6 +22,7 @@ body {
     margin:0px auto; 
     display:flex;
 }
+    
 .map-container {
     align-content: center;
     justify-content: center;
@@ -80,79 +81,82 @@ pointer-events: none;
   <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body class="bg-white">
-    
-<!--Navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <img src="zap.svg" style="margin-right: 10px;"/><a class="navbar-brand" href="#">Home Buying Helper</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <img src="home.svg" style="margin-left: 10px;"/><a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          </div>
-        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-inverse">
+  
 </nav>
-
-    
 <!-- Dropdown buttons for preferences  -->
 <div style="text-align:center">
     <h2 class="display-4" style="margin-top: 10px">Home Buying Helper </h2>
     <p class="lead">Find your dream home with the information that matters.</p>
 </div>
 <div class="button-selections">
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bed(s)
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">1+</a></li>
-    <li><a href="#">2+</a></li>
-    <li><a href="#">3+</a></li>
-    <li><a href="#">4+</a></li>
-  </ul>
+<div class="btn-group"> 
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary bed-status">Bed(s)</button>
+    <button class="btn btn-primary dropdown-toggle dropdown-bed" data-toggle="dropdown"> <span class="caret"></span> 
+    </button>
+    <ul class="dropdown-menu dropdown-inverse dropdown-bed">
+    <li><a href="#" value=1>1 Bed</a></li>
+    <li><a href="#" value=2>2 Bed</a></li>
+    <li><a href="#" value=3>3 Bed</a></li>
+    <li><a href="#" value=4>4+ Bed</a></li>
+    </ul>
 </div>
-<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bath(s)</button>
-      <ul class="dropdown-menu">
-    <li><a href="#">1+</a></li>
-    <li><a href="#">2+</a></li>
-    <li><a href="#">3+</a></li>
-    <li><a href="#">4+</a></li>
-  </ul>
+    
+<div class="btn-group"> 
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary bath-status">Bath(s)</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    </button>
+    <ul class="dropdown-menu dropdown-inverse dropdown-bath">
+    <li><a href="#" value=1>1 Bath</a></li>
+    <li><a href="#" value=2>2 Bath</a></li>
+    <li><a href="#" value=3>3 Bath</a></li>
+    <li><a href="#" value=4>4+ Bath</a></li>
+    </ul>
 </div>
-<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">School Rating</button>
-      <ul class="dropdown-menu">
-    <li><a href="#">2+ Stars</a></li>
-    <li><a href="#">3+ Stars</a></li>
-    <li><a href="#">4+ Stars</a></li>
-  </ul>
+    
+<div class="btn-group"> 
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary school-status">Local School(s)</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    </button>
+    <ul class="dropdown-menu dropdown-inverse dropdown-school">
+    <li><a href="#" value=1>1 School</a></li>
+    <li><a href="#" value=2>2 Schools</a></li>
+    <li><a href="#" value=3>3 Schools</a></li>
+    <li><a href="#" value=4>4+ Schools</a></li>
+    </ul>
 </div>
-<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Restaurant Quality</button>
-      <ul class="dropdown-menu">
-    <li><a href="#">3+ Stars</a></li>
-    <li><a href="#">4+ Stars</a></li>
-  </ul>
+<div class="btn-group"> 
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary food-status">Local Restaurants(s)</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    </button>
+    <ul class="dropdown-menu dropdown-inverse dropdown-food">
+    <li><a href="#" value=1>1 Restaurant</a></li>
+    <li><a href="#" value=2>2 Restaurants</a></li>
+    <li><a href="#" value=3>3 Restaurants</a></li>
+    <li><a href="#" value=4>4+ Restaurants</a></li>
+    </ul>
 </div>
-<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Square Feet of Unit</button>
-      <ul class="dropdown-menu">
-    <li><a href="#">1,000 to 2,000 Sq. Ft.</a></li>
-    <li><a href="#">2,001 to 3,000 Sq. Ft.</a></li>
-    <li><a href="#">3,000+ Sq. Ft.</a></li>
-  </ul>
+    
+<div class="btn-group"> 
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary valuation-status">Estimated Valuation</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    </button>
+    <ul class="dropdown-menu dropdown-inverse dropdown-valuation">
+    <li><a href="#" value=1>$100,000</a></li>
+    <li><a href="#" value=2>$200,000</a></li>
+    <li><a href="#" value=3>$300,000</a></li>
+    <li><a href="#" value=4>$400,000</a></li>
+    </ul>
 </div>
-<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Price</button>
-  <ul class="dropdown-menu">
-    <li><a href="#">$100,000 to $200,000</a></li>
-    <li><a href="#">$201,000 to $300,000</a></li>
-    <li><a href="#">$301,000 to $400,000</a></li>
-    <li><a href="#">$401,000 to $500,000</a></li>
-    <li><a href="#">$501,000+</a></li>
-  </ul>
-</div>
+    <div class="btn-group"> 
+    <button class="btn btn-primary  btn-success school-status">Find My Home!</button>
+    </div>
 </div>
     
     
@@ -169,8 +173,28 @@ pointer-events: none;
     //The Google Maps Javascript API documentation https://developers.google.com/maps/documentation/javascript/tutorial
     //A D3 & Google Maps demo from Mike Bostock https://bl.ocks.org/mbostock/899711
 
+$('.dropdown-school li > a').click(function(e){
+    $('.school-status').text(this.innerHTML);
+});   
+        
+$('.dropdown-bed li > a').click(function(e){
+    $('.bed-status').text(this.innerHTML);
+});         
 
-    // Create the Google Map
+$('.dropdown-bath li > a').click(function(e){
+    $('.bath-status').text(this.innerHTML);
+});
+
+$('.dropdown-food li > a').click(function(e){
+    $('.food-status').text(this.innerHTML);
+});
+        
+$('.dropdown-valuation li > a').click(function(e){
+    $('.valuation-status').text(this.innerHTML);
+});        
+        
+        
+// Create the Google Map
 var map = new google.maps.Map(d3.select("#map").node(), {
   zoom: 12,
   draggableCursor: 'crosshair',
@@ -757,8 +781,7 @@ d3.csv("data_fullset.csv", function(data) {
     }
     </script>
     
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
     <script src="js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
 </body>
