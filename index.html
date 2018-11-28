@@ -155,7 +155,7 @@ pointer-events: none;
     </ul>
 </div>
     <div class="btn-group"> 
-    <button class="btn btn-primary  btn-success">Find My Home!</button>
+    <button class="btn btn-primary btn-success submit-button">Find My Home!</button>
     </div>
 </div>
     
@@ -168,7 +168,7 @@ pointer-events: none;
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgxQWww-7HpKFQ6UudMzeIch0yekeEgcs"></script>
     <script src="./lib/d3.v3.min.js"></script>
     <script type="text/javascript">
-
+        buildMap();
     //We used the following resources as reference to build this visualization:
     //The Google Maps Javascript API documentation https://developers.google.com/maps/documentation/javascript/tutorial
     //A D3 & Google Maps demo from Mike Bostock https://bl.ocks.org/mbostock/899711
@@ -192,13 +192,17 @@ pointer-events: none;
     $('.dropdown-valuation li > a').click(function(e){
         $('.valuation-status').text(this.innerHTML);
     });        
-
+        
+    $('.submit-button').click(function(e){
+        //pass parameters here
+        buildMap();
+    });       
 // Grab value from a select button - each select button class naming is like above : descriptor-status
 //    var estimate_val = $('.valuation-status').text();
 //    console.log('estimate val' + estimate_val);
         
 // do we need logic to update the map based on a submit click or a change?
-        
+function buildMap(){
 // Create the Google Map
 var map = new google.maps.Map(d3.select("#map").node(), {
   zoom: 12,
@@ -298,7 +302,7 @@ d3.csv("data_fullset.csv", function(data) {
     };
     overlay.setMap(map);
 });
-
+}
     // KEY: [#schools, #yelp venues, year built, size, #bedrooms, #bathrooms]
     lookupTable =
     {'0,0,1958,1000,2,1.5': 402198.57143025595,
@@ -784,6 +788,7 @@ d3.csv("data_fullset.csv", function(data) {
 
       return lookupTable[[schoolCount, yelpCount, yearBuilt, homeSize, bedrooms, bathrooms]];
     }
+    
     </script>
     
 
