@@ -194,8 +194,8 @@ pointer-events: none;
     });        
 
 // Grab value from a select button - each select button class naming is like above : descriptor-status
-//    var estimate_val = $('.valuation-status').text();
-//    console.log('estimate val' + estimate_val);
+   var estimate_val = $('.valuation-status').text();
+    console.log('estimate val' + estimate_val);
         
 // do we need logic to update the map based on a submit click or a change?
         
@@ -216,7 +216,9 @@ d3.csv("data_fullset.csv", function(data) {
         d.Lat = +d.Lat;
         d.Lon = +d.Lon;
         d.Zestimate = +d.Zestimate;
+        d.Score = lookup(d);
     });
+    console.log(data);
     //Create nested data set to account for houses with exact same Lat, Lon coordinates
     var nested_data = d3.nest()
                         .key(function(d) { return d.Location;})
@@ -233,7 +235,8 @@ d3.csv("data_fullset.csv", function(data) {
                                 min_beds: Math.round(d3.min(v, function(d) { return d.Bedrooms;})),
                                 avg_baths: Math.round(d3.mean(v, function(d) { return d.Bathrooms;})),
                                 max_baths: Math.round(d3.max(v, function(d) { return d.Bathrooms;})),
-                                min_baths: Math.round(d3.min(v, function(d) { return d.Bathrooms;}))
+                                min_baths: Math.round(d3.min(v, function(d) { return d.Bathrooms;})),
+                                avg_score: Math.round(d3.mean(v, function(d) { return d.Score;})).toLocaleString()
                             };
                         })
                         .entries(data);
@@ -249,7 +252,7 @@ d3.csv("data_fullset.csv", function(data) {
                     .range([4, 15]);
     
     //Define the tooltip
-    var tooltip = d3.select("#map-body")
+    var tooltip = d3.select("#map")
                 .append("div")
                 .attr("class", "tooltip")
                 .style("opacity", 0);
@@ -276,9 +279,9 @@ d3.csv("data_fullset.csv", function(data) {
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", 1);
-                    tooltip.html("<h3># of Homes: " + d.value.values['homes'] + "</h3>" + "<br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
-                        .style("left", (d3.event.pageX - 50) + "px")
-                        .style("top", (d3.event.pageY - 185) + "px");
+                    tooltip.html("<h3>Price Estimate: $" + d.value.values['avg_score'] + "</h3>" +"<br># of Homes: " + d.value.values['homes'] + "<br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
+                        .style("left", (d3.event.pageX - 325) + "px")
+                        .style("top", (d3.event.pageY - 450) + "px");
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).attr("r", rScale(d.value.values['avg_zestimate']))
