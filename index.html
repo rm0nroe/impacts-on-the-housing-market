@@ -196,14 +196,56 @@ pointer-events: none;
         
     $('.submit-button').click(function(e){
         //pass parameters here
+
         buildMap();
     });       
-// Grab value from a select button - each select button class naming is like above : descriptor-status
-   var estimate_val = $('.valuation-status').text();
-    console.log('estimate val' + estimate_val);
+
         
 // do we need logic to update the map based on a submit click or a change?
 function buildMap(){
+    var estimate_val = $('.valuation-status').text().substring(1,2);
+    var school_stat = $('.school-status').text().substring(0,1);
+    var bed_stat = $('.bed-status').text().substring(0,1);
+    var bath_stat = $('.bath-status').text().substring(0,1);
+    var food_stat = $('.food-status').text().substring(0,1);
+
+    if(estimate_val == 's') {
+        var val_filter = 0
+    } else {
+        var val_filter = +estimate_val*100000
+    };
+
+    if(school_stat =='N') {
+        var school_filter = 0
+    } else {
+        var school_filter = +school_stat
+    };
+
+    if(bed_stat == 'B') {
+        var bed_filter = 0
+    } else {
+        var bed_filter = +bed_stat
+    };
+
+    if(bath_stat == 'B') {
+        var bath_filter = 0
+    } else {
+        var bath_filter = +bath_stat
+    };
+
+    if(food_stat == 'N') {
+        var food_filter = 0
+    } else {
+        var food_filter = +food_stat
+    };
+
+    
+    //console.log(val_filter);
+    console.log(school_filter);
+    console.log(bed_filter);
+    //console.log(bath_filter);
+    //console.log(food_filter);
+        
 // Create the Google Map
 var map = new google.maps.Map(d3.select("#map").node(), {
   zoom: 12,
@@ -216,14 +258,23 @@ var map = new google.maps.Map(d3.select("#map").node(), {
 // Load data
 
 d3.csv("data_fullset.csv", function(data) {
-    //console.log(data);
     data.forEach(function(d) {
         d.Lat = +d.Lat;
         d.Lon = +d.Lon;
         d.Zestimate = +d.Zestimate;
+        d.Bedrooms = +d.Bedrooms;
+        d.total_school = +d.total_school;
+        d.count_yelp = +d.count_yelp;
+        d.Bathrooms = +d.Bathrooms;
         d.Score = lookup(d);
     });
+    datafilter();
 
+    function datafilter(d) {
+        data = data.filter(function(d) {return d.Bedrooms >= bed_filter && d.total_school >= school_filter && d.count_yelp >= food_filter && d.Bathrooms >= bath_filter && d.Score >= val_filter});
+        return data;
+    }
+    console.log(data);
     //Create nested data set to account for houses with exact same Lat, Lon coordinates
     var nested_data = d3.nest()
                         .key(function(d) { return d.Location;})
@@ -288,8 +339,8 @@ d3.csv("data_fullset.csv", function(data) {
                         .duration(200)
                         .style("opacity", 1);
                     tooltip.html("<h5>Budget: $" + d.value.values['avg_score'] + "</h5>" +"<br># of Homes: " + d.value.values['homes'] + "<br>Avg. Yelp Stars: " + d.value.values['avg_yelp'] + "<br># Private Schools: " + d.value.values['private_schools'] + "<br># Public Schools: " + d.value.values['public_schools'] + "<br><br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
-                        .style("left", (d3.event.pageX - 325) + "px")
-                        .style("top", (d3.event.pageY - 490) + "px");
+                        .style("left", (d3.event.pageX - 150) + "px")
+                        .style("top", (d3.event.pageY - 480) + "px");
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).attr("r", rScale(d.value.values['avg_zestimate']))
