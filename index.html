@@ -155,7 +155,7 @@ pointer-events: none;
     </ul>
 </div>
     <div class="btn-group"> 
-    <button class="btn btn-primary  btn-success school-status">Find My Home!</button>
+    <button class="btn btn-primary  btn-success">Find My Home!</button>
     </div>
 </div>
     
@@ -173,26 +173,31 @@ pointer-events: none;
     //The Google Maps Javascript API documentation https://developers.google.com/maps/documentation/javascript/tutorial
     //A D3 & Google Maps demo from Mike Bostock https://bl.ocks.org/mbostock/899711
 
-$('.dropdown-school li > a').click(function(e){
-    $('.school-status').text(this.innerHTML);
-});   
-        
-$('.dropdown-bed li > a').click(function(e){
-    $('.bed-status').text(this.innerHTML);
-});         
+    $('.dropdown-school li > a').click(function(e){
+        $('.school-status').text(this.innerHTML);
+    });   
 
-$('.dropdown-bath li > a').click(function(e){
-    $('.bath-status').text(this.innerHTML);
-});
+    $('.dropdown-bed li > a').click(function(e){
+        $('.bed-status').text(this.innerHTML);
+    });         
 
-$('.dropdown-food li > a').click(function(e){
-    $('.food-status').text(this.innerHTML);
-});
+    $('.dropdown-bath li > a').click(function(e){
+        $('.bath-status').text(this.innerHTML);
+    });
+
+    $('.dropdown-food li > a').click(function(e){
+        $('.food-status').text(this.innerHTML);
+    });
+
+    $('.dropdown-valuation li > a').click(function(e){
+        $('.valuation-status').text(this.innerHTML);
+    });        
+
+// Grab value from a select button - each select button class naming is like above : descriptor-status
+//    var estimate_val = $('.valuation-status').text();
+//    console.log('estimate val' + estimate_val);
         
-$('.dropdown-valuation li > a').click(function(e){
-    $('.valuation-status').text(this.innerHTML);
-});        
-        
+// do we need logic to update the map based on a submit click or a change?
         
 // Create the Google Map
 var map = new google.maps.Map(d3.select("#map").node(), {
