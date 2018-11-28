@@ -17,8 +17,8 @@ body {
 }
 
 #map {
-    width: 70%; 
-    height: 60%; 
+    width: 90%; 
+    height: 70%; 
     margin:0px auto; 
     display:flex;
 }
@@ -27,8 +27,8 @@ body {
     align-content: center;
     justify-content: center;
     position: relative;
-    width: 80%;
-    height: 70%;
+    width: 90%;
+    height: 80%;
     text-align: center;
     display: inline;
 }    
@@ -82,19 +82,22 @@ pointer-events: none;
 </head>
 <body class="bg-white">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-inverse">
-  
+<nav class="navbar navbar-inverse">
+<!--    <img src="zap.svg" style="margin-right: 10px; ali">-->
+    <h2 class="display-4" style="text-align: center; color: #ffffff;">
+        <img src="zap.svg" style="margin-bottom: 5px; ali; width: 1.5%; height: 1.5%; background-color: gold;">
+        Home Buying Assistant</h2>
 </nav>
 <!-- Dropdown buttons for preferences  -->
 <div style="text-align:center">
-    <h2 class="display-4" style="margin-top: 10px">Home Buying Helper </h2>
-    <p class="lead">Find your dream home with the information that matters.</p>
+    <h2 class="display-4" style="margin-top: 10px"></h2>
+    <p class="lead">Input your preferences below and find your new home!<br/></p>
 </div>
 <div class="button-selections">
 <div class="btn-group"> 
     <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-    <button class="btn btn-primary bed-status">Bed(s)</button>
-    <button class="btn btn-primary dropdown-toggle dropdown-bed" data-toggle="dropdown"> <span class="caret"></span> 
+    <button class="btn btn-default btn-sm bed-status">Bed(s)</button>
+    <button class="btn btn-default btn-sm dropdown-toggle dropdown-bed" data-toggle="dropdown"> <span class="caret"></span> 
     </button>
     <ul class="dropdown-menu dropdown-inverse dropdown-bed">
     <li><a href="#" value=1>1 Bed</a></li>
@@ -106,33 +109,31 @@ pointer-events: none;
     
 <div class="btn-group"> 
     <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-    <button class="btn btn-primary bath-status">Bath(s)</button>
-    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    <button class="btn btn-default btn-sm bath-status">Bath(s)</button>
+    <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
     </button>
     <ul class="dropdown-menu dropdown-inverse dropdown-bath">
     <li><a href="#" value=1>1 Bath</a></li>
     <li><a href="#" value=2>2 Bath</a></li>
-    <li><a href="#" value=3>3 Bath</a></li>
-    <li><a href="#" value=4>4+ Bath</a></li>
+    <li><a href="#" value=3>3+ Bath</a></li>
     </ul>
 </div>
     
-<div class="btn-group"> 
+<div class="btn-group">
     <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-    <button class="btn btn-primary school-status">Local School(s)</button>
-    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    <button class="btn btn-default btn-sm school-status">Number of Local School(s)</button>
+    <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
     </button>
     <ul class="dropdown-menu dropdown-inverse dropdown-school">
-    <li><a href="#" value=1>1 School</a></li>
+    <li><a href="#" value=1>1 Schools</a></li>
     <li><a href="#" value=2>2 Schools</a></li>
-    <li><a href="#" value=3>3 Schools</a></li>
-    <li><a href="#" value=4>4+ Schools</a></li>
+    <li><a href="#" value=3>3+ Schools</a></li>
     </ul>
 </div>
 <div class="btn-group"> 
     <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-    <button class="btn btn-primary food-status">Local Restaurants(s)</button>
-    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    <button class="btn btn-default btn-sm food-status">Number of Local Restaurant(s)</button>
+    <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
     </button>
     <ul class="dropdown-menu dropdown-inverse dropdown-food">
     <li><a href="#" value=1>1 Restaurant</a></li>
@@ -144,18 +145,18 @@ pointer-events: none;
     
 <div class="btn-group"> 
     <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-    <button class="btn btn-primary valuation-status">Estimated Valuation</button>
-    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
+    <button class="btn btn-default btn-sm valuation-status">Estimated Valuation ($)</button>
+    <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
     </button>
     <ul class="dropdown-menu dropdown-inverse dropdown-valuation">
     <li><a href="#" value=1>$100,000</a></li>
     <li><a href="#" value=2>$200,000</a></li>
     <li><a href="#" value=3>$300,000</a></li>
-    <li><a href="#" value=4>$400,000</a></li>
+    <li><a href="#" value=4>$400,000+</a></li>
     </ul>
 </div>
     <div class="btn-group"> 
-    <button class="btn btn-primary btn-success submit-button">Find My Home!</button>
+    <button class="btn btn-primary btn-success btn-sm submit-button">Find My Home!</button>
     </div>
 </div>
     
