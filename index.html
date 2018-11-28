@@ -222,7 +222,7 @@ d3.csv("data_fullset.csv", function(data) {
         d.Zestimate = +d.Zestimate;
         d.Score = lookup(d);
     });
-    console.log(data);
+
     //Create nested data set to account for houses with exact same Lat, Lon coordinates
     var nested_data = d3.nest()
                         .key(function(d) { return d.Location;})
@@ -231,6 +231,9 @@ d3.csv("data_fullset.csv", function(data) {
                                 Lat: d3.max(v, function(d) { return d.Lat }),
                                 Lon: d3.max(v, function(d) { return d.Lon }),
                                 homes: Math.round(v.length),
+                                private_schools: Math.round(d3.mean(v, function(d) { return d.private_school;})),
+                                public_schools: Math.round(d3.mean(v, function(d) { return d.public_school;})),
+                                avg_yelp: Math.round(d3.sum(v, function(d) { return d.stars;})/d3.sum(v, function(d) { return d.count_yelp;})),
                                 avg_zestimate: Math.round(d3.mean(v, function(d) { return d.Zestimate;})),
                                 max_zestimate: Math.round(d3.max(v, function(d) { return d.Zestimate;})),
                                 min_zestimate: Math.round(d3.min(v, function(d) { return d.Zestimate;})),
@@ -244,7 +247,7 @@ d3.csv("data_fullset.csv", function(data) {
                             };
                         })
                         .entries(data);
-
+    console.log(nested_data);
     var overlay = new google.maps.OverlayView();
 
     overlay.onAdd = function() {
@@ -283,9 +286,9 @@ d3.csv("data_fullset.csv", function(data) {
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", 1);
-                    tooltip.html("<h3>Price Estimate: $" + d.value.values['avg_score'] + "</h3>" +"<br># of Homes: " + d.value.values['homes'] + "<br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
+                    tooltip.html("<h5>Price Estimate: $" + d.value.values['avg_score'] + "</h5>" +"<br># of Homes: " + d.value.values['homes'] + "<br>Avg. Yelp Stars: " + d.value.values['avg_yelp'] + "<br># Private Schools: " + d.value.values['private_schools'] + "<br># Public Schools: " + d.value.values['public_schools'] + "<br><br>Avg Beds: "+d.value.values['avg_beds']+ "<br>Max Beds: "+d.value.values['max_beds']+ "<br>Min Beds: "+d.value.values['min_beds']+"<br><br>Avg Baths: "+d.value.values['avg_baths'] +"<br>Max Baths: "+d.value.values['max_baths'] +"<br>Min Baths: "+d.value.values['min_baths'])
                         .style("left", (d3.event.pageX - 325) + "px")
-                        .style("top", (d3.event.pageY - 450) + "px");
+                        .style("top", (d3.event.pageY - 490) + "px");
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).attr("r", rScale(d.value.values['avg_zestimate']))
