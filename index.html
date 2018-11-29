@@ -801,7 +801,7 @@ d3.csv("data_fullset.csv", function(data) {
       if (typeof value != 'undefined') {
         return value;
       } else {
-        return defaultValue;
+        return +defaultValue;
       }
     }
 
@@ -822,14 +822,13 @@ d3.csv("data_fullset.csv", function(data) {
       return value;
     }
 
-
     function lookup(params){
-      var schoolCount = defaultParam(params.schoolCount, 0);
-      var yelpCount = defaultParam(params.yelpCount, 0);
-      var yearBuilt = defaultParam(params.yearBuilt, 1958);
-      var homeSize = defaultParam(params.homeSize, 500);
-      var bedrooms = defaultParam(params.bedrooms, 2);
-      var bathrooms = defaultParam(params.bathrooms, 1.5)
+      var schoolCount = defaultParam(params['total_schools'], 0);
+      var yelpCount = defaultParam(params['count_yelp'], 0);
+      var yearBuilt = defaultParam(params['Year Built'], 1958);
+      var homeSize = defaultParam(params['Home Size'], 500);
+      var bedrooms = defaultParam(params['Bedrooms'], 2);
+      var bathrooms = defaultParam(params['Bathrooms'], 1.5);
 
       if (bedrooms >= 3) {
         bedrooms = 4;
@@ -837,14 +836,18 @@ d3.csv("data_fullset.csv", function(data) {
         bedrooms = 2;
       }
 
-      if (bathrooms > 2) {
-        bathrooms = 2.5;
-      }
-
+      yelpCount = nextNearest([0, 1, 3], yelpCount);
       yearBuilt = nextNearest([1958, 1978, 1988, 1998, 2008, 2018], yearBuilt);
       homeSize = nextNearest([500, 1000, 2000, 3000], homeSize);
+      bathrooms = nextNearest([1.5, 2, 2.5], bathrooms);
 
-      return lookupTable[[schoolCount, yelpCount, yearBuilt, homeSize, bedrooms, bathrooms]];
+      var value = lookupTable[[schoolCount, yelpCount, yearBuilt, homeSize, bedrooms, bathrooms]];
+      
+      if (value) {
+        return value;
+      } else {
+        return +params['Zestimate']
+      }
     }
     
     </script>
