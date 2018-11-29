@@ -43,9 +43,9 @@ body {
 }
 
 .homes svg {
-        width: 60px;
-        height: 20px;
-        padding-right: 100px;
+        width: 40px;
+        height: 40px;
+        padding-right: 0px;
         font: 10px sans-serif;
 }
 
@@ -319,7 +319,7 @@ d3.csv("data_fullset.csv", function(data) {
     //Draw each marker
     overlay.draw = function() {
         var projection = this.getProjection(),
-        padding = 10;
+        padding = 20;
 
         var marker = layer.selectAll("svg")
             .data(d3.entries(nested_data))
