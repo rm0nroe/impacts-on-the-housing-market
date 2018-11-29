@@ -149,9 +149,9 @@ pointer-events: none;
     <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> 
     </button>
     <ul class="dropdown-menu dropdown-inverse dropdown-valuation">
-    <li><a href="#" value=1>$100,000</a></li>
-    <li><a href="#" value=2>$200,000</a></li>
-    <li><a href="#" value=3>$300,000</a></li>
+    <li><a href="#" value=1>$100,000 - $200,000</a></li>
+    <li><a href="#" value=2>$200,000 - $300,000</a></li>
+    <li><a href="#" value=3>$300,000 - $400,000</a></li>
     <li><a href="#" value=4>$400,000+</a></li>
     </ul>
 </div>
@@ -211,8 +211,13 @@ function buildMap(){
 
     if(estimate_val == 's') {
         var val_filter = 0
+        var val_max = 9999999999999
+    } else if(estimate_val == 4) {
+        var val_filter = +estimate_val*100000
+        var val_max = 9999999999999
     } else {
         var val_filter = +estimate_val*100000
+        var val_max = val_filter + 100000
     };
 
     if(school_stat =='N') {
@@ -271,7 +276,7 @@ d3.csv("data_fullset.csv", function(data) {
     datafilter();
 
     function datafilter(d) {
-        data = data.filter(function(d) {return d.Bedrooms >= bed_filter && d.total_school >= school_filter && d.count_yelp >= food_filter && d.Bathrooms >= bath_filter && d.Score >= val_filter});
+        data = data.filter(function(d) {return d.Bedrooms >= bed_filter && d.total_school >= school_filter && d.count_yelp >= food_filter && d.Bathrooms >= bath_filter && d.Score >= val_filter && d.Score < val_max});
         return data;
     }
     console.log(data);
