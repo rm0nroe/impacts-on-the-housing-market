@@ -349,7 +349,7 @@ d3.csv("data_fullset.csv", function(data) {
                             .style("right", function(d){ 
                                 if (d3.event.pageX < 450){
                                     console.log('RIGHT: d.x > ' + d3.event.pageX + 'd.y > ' + d3.event.pageY)
-                                    return 900 - d3.event.pageX - 170 + "px" 
+                                    return 900 - d3.event.pageX + "px" 
                                 } 
                                     return null;
                             })
